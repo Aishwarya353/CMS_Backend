@@ -88,18 +88,6 @@ module.exports = {
       console.log("error in faculty fetchStudents", err.message);
     }
   },
-  getStudentByName: async (req, res, next) => {
-    try {
-      const { name } = req.body;
-      const faculties = await Faculty.find({ name });
-      if (faculties.length === 0) {
-        return res.status(400).json({ message: "No student found" });
-      }
-      return res.status(200).json({ result: faculties });
-    } catch (err) {
-      return res.status(400).json({ message: err.message });
-    }
-  },
 
   markAttendence: async (req, res, next) => {
     try {

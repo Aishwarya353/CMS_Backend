@@ -9,7 +9,6 @@ const {
   markAttendence,
   facultyLogin,
   getAllSubjects,
-  getStudentByName,
   updatePassword,
   forgotPassword,
   postOTP,
